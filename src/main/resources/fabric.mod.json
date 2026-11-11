@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "jjok-bananas",
+	"version": "${version}",
+	"name": "JanJansens Banana Mod",
+	"description": "The best banana mod in the entire world!!!!",
+	"authors": [
+		"JanJansenOhneK"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/jjok-bananas/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.banana.JanJansensBananaMod"
+		],
+		"client": [
+			"com.banana.client.JanJansensBananaModClient"
+		]
+	},
+	"mixins": [
+		"jjok-bananas.mixins.json",
+		{
+			"config": "jjok-bananas.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
